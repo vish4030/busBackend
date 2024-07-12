@@ -1,4 +1,5 @@
 import express from 'express';
+import 'dotenv/config';
 import cors from 'cors';
 
 import busRouter from "./routes/bus.js";
@@ -12,3 +13,6 @@ app.use(busRouter);
 app.use(userRouter);
 
 
+
+
+app.listen(process.env.PORT,()=>{console.log(`server working at port ${process.env.PORT}`)})
