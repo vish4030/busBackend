@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json())
 app.use(busRouter);
 app.use(userRouter);
+app.listen(process.env.PORT,()=>{console.log(`server working at port ${process.env.PORT}`)})
 
 
 
